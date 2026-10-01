@@ -59,6 +59,8 @@
     │   └── favCard.js
     └── app.js               # Главный скрипт: события, рендер, поиск
 
+---
+
 ## Запуск локально
 
 1. Склонируйте репозиторий: `git clone https://github.com/Andrewbuba123/Book-Catalog.git`
