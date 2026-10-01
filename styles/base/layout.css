@@ -1,0 +1,32 @@
+.page__header,
+.page__main,
+.page__footer {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: stretch;
+  padding-block: 0 60px;
+}
+
+.main-layout__hero {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .page__header,
+  .page__main,
+  .page__footer {
+    padding-inline: 24px;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}

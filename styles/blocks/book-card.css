@@ -1,0 +1,101 @@
+.book-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.book-card__cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+  background: var(--secondary);
+}
+
+.book-card__content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.book-card__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-card__author {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-card__year {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.book-card__fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.book-card__fav-btn:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.book-card__fav-btn:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.book-card__fav-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: transparent;
+  stroke: var(--text);
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.catalog__item--favorite .book-card__fav-btn {
+  background: var(--white);
+}
+
+.catalog__item--favorite .book-card__fav-icon {
+  fill: var(--red);
+  stroke: var(--red);
+}

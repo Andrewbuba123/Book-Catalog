@@ -1,0 +1,14 @@
+
+@import "./base/variables.css";
+@import "./base/reset.css";
+@import "./base/layout.css";
+
+
+@import "./blocks/header.css";
+@import "./blocks/hero.css";
+@import "./blocks/search-form.css";
+@import "./blocks/catalog.css";
+@import "./blocks/book-card.css";
+@import "./blocks/favorites.css";
+@import "./blocks/fav-card.css";
+@import "./blocks/footer.css";

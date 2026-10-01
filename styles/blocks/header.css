@@ -1,0 +1,41 @@
+.header {
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  padding-block: 16px;
+}
+
+.header__logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo-icon {
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  background: var(--green);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.header__title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--title);
+}
+
+.header__subtitle {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text);
+  margin-top: 2px;
+}

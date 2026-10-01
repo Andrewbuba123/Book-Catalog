@@ -1,0 +1,47 @@
+.favorites {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+  align-self: stretch;
+}
+
+.favorites__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.favorites__icon {
+  width: 14px;
+  height: 14px;
+  padding: 6px;
+  background: var(--favorite);
+  border-radius: 50%;
+}
+
+.favorites__title {
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.favorites__counter {
+  margin: 2px 0 16px 28px;
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.favorites__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .favorites {
+    height: auto;
+  }
+}

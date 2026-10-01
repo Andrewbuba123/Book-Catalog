@@ -3,208 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <title>The Library</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+   <script type="module" src="./js/index.js"></script>.
   </head>
-  <body>
-    <header>
-      <div>
-        <img src="./assets/book.svg" alt="Logo" />
-        <span>The Library</span>
+  <body class="page">
+    <header class="header page__header">
+      <div class="header__logo-group">
+        <img class="header__logo-icon" src="./assets/book.svg" alt="Logo" />
+        <div class="header__title-group">
+          <span class="header__title">The Library</span>
+          <p class="header__subtitle">Discover your next favorite book</p>
+        </div>
       </div>
-      <p>Discover your next favorite book</p>
     </header>
 
-    <main>
-      <section>
-        <h1>Discover Your Next Great Read</h1>
-        <p>
+    <main class="page__main main-layout">
+      <section class="hero main-layout__hero">
+        <h1 class="hero__title">Discover Your Next Great Read</h1>
+        <p class="hero__desc">
           Search millions of books, build your personal library, and never lose
           track of what to read next.
         </p>
 
-        <form>
-          <img src="./assets/search.svg" alt="Search icon" />
+        <form class="search-form hero__search-form">
+          <img class="search-form__icon" src="./assets/search.svg" alt="Search icon" />
           <input
+            class="search-form__input"
             type="text"
             placeholder="Search for books by title or author..."
           />
-          <button type="submit">Search</button>
+          <button class="search-form__submit" type="submit">Search</button>
         </form>
       </section>
 
-      <section>
-        <h2>Catalog</h2>
-        <ul>
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="The Great Gatsby" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>The Great Gatsby</h3>
-              <p>F. Scott Fitzgerald</p>
-              <span>1925</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Pride and Prejudice" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>Pride and Prejudice</h3>
-              <p>Jane Austen</p>
-              <span>1813</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="To Kill a Mockingbird" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>To Kill a Mockingbird</h3>
-              <p>Harper Lee</p>
-              <span>1960</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="The Catcher in the Rye" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>The Catcher in the Rye</h3>
-              <p>J.D. Salinger</p>
-              <span>1951</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="The Hobbit" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>The Hobbit</h3>
-              <p>J.R.R. Tolkien</p>
-              <span>1937</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Fahrenheit 451" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>Fahrenheit 451</h3>
-              <p>Ray Bradbury</p>
-              <span>1953</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Brave New World" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>Brave New World</h3>
-              <p>Aldous Huxley</p>
-              <span>1932</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="The Lord of the Rings" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>The Lord of the Rings</h3>
-              <p>J.R.R. Tolkien</p>
-              <span>1954</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Jane Eyre" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>Jane Eyre</h3>
-              <p>Charlotte Brontë</p>
-              <span>1847</span>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Wuthering Heights" />
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Add to favorites" />
-              </button>
-              <h3>Wuthering Heights</h3>
-              <p>Emily Brontë</p>
-              <span>1847</span>
-            </article>
-          </li>
-        </ul>
+      <section class="catalog main-layout__catalog">
+        <ul class="catalog__list"></ul>
       </section>
 
-      <aside>
-        <div>
-          <img src="./assets/heart.svg" alt="Favorites" />
-          <h2>Favorites</h2>
+      <aside class="favorites main-layout__favorites">
+        <div class="favorites__header">
+          <img class="favorites__icon" src="./assets/heart.svg" alt="Favorites" />
+          <h2 class="favorites__title">Favorites</h2>
         </div>
-        <p>3 books saved</p>
+        <p class="favorites__counter">0 books saved</p>
 
-        <ul>
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="The Hobbit" />
-              <h3>The Hobbit</h3>
-              <p>J.R.R. Tolkien</p>
-              <span>1937</span>
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Remove from favorites" />
-              </button>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Dune" />
-              <h3>Dune</h3>
-              <p>Frank Herbert</p>
-              <span>1965</span>
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Remove from favorites" />
-              </button>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <img src="./assets/book.svg" alt="Pride and Prejudice" />
-              <h3>Pride and Prejudice</h3>
-              <p>Jane Austen</p>
-              <span>1813</span>
-              <button type="button">
-                <img src="./assets/heart.svg" alt="Remove from favorites" />
-              </button>
-            </article>
-          </li>
-        </ul>
+        <ul class="favorites__list"></ul>
       </aside>
     </main>
 
-    <footer>
-      <p>Powered by Open Library</p>
+    <footer class="footer page__footer">
+      <p class="footer__text">Powered by Open Library</p>
     </footer>
   </body>
 </html>

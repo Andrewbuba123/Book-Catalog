@@ -1,0 +1,75 @@
+.fav-card {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  background: #fbf9f5;
+  border: 1px solid var(--border);
+}
+
+.fav-card__cover {
+  grid-row: 1 / 4;
+  width: 42px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--secondary);
+}
+
+.fav-card__title {
+  grid-column: 2;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fav-card__author {
+  grid-column: 2;
+  font-size: 0.72rem;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fav-card__year {
+  grid-column: 2;
+  font-size: 0.68rem;
+  color: var(--text);
+}
+
+.fav-card__remove-btn {
+  grid-row: 1 / 4;
+  border: none;
+  background: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.fav-card__remove-btn:hover {
+  transform: scale(1.15);
+}
+
+.fav-card__remove-btn:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.fav-card__remove-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: var(--red);
+  stroke: var(--red);
+}
