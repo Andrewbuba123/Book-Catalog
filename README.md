@@ -1,5 +1,5 @@
 #  Book Сatalog
- [Посмотреть demo](https://andrewbuba123.github.io/Book-Catalog/) 
+ [Посмотреть demo](https://andrewbuba123.github.io/Book-Catalog/)   
 Адаптивное веб-приложение для поиска книг и ведения персонального списка избранного с использованием открытого API библиотеки Open Library.
 
 ---
