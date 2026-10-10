@@ -1,9 +1,5 @@
 # Book Catalog
 
-## Demo
-
-[Open the application](https://andrewbuba123.github.io/frontend-roadmap/)
-
 ## Description
 
 Book Catalog is a small frontend application for browsing and searching books.
