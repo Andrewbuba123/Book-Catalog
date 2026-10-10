@@ -55,19 +55,19 @@ function handleToggleFavorite(book) {
   renderFavorites();
 }
 
-async function renderBooks() {
+async function renderBooks(query) {
   if (!bookList) return;
-  bookList.replaceChildren();
+  showMessage("Loading books...");
 
-  const books = await getBooks();
+  const books = await getBooks(query);
 
   if (!books) {
-    showMessage("Не удалось загрузить книги. Проверьте интернет или попробуйте позже.");
+    showMessage("Failed to load books. Check your connection or try again later.");
     return;
   }
 
   if (books.length === 0) {
-    showMessage("Книги не найдены.");
+    showMessage("Nothing found for your request.");
     return;
   }
 
@@ -76,50 +76,20 @@ async function renderBooks() {
     fragment.append(createBook(book, handleToggleFavorite));
   });
 
-  bookList.append(fragment);
+  bookList.replaceChildren(fragment);
   syncFavButtons();
-}
-
-function searchBook(inputValue) {
-  const query = inputValue.trim().toLowerCase();
-  const allCards = document.querySelectorAll(".catalog__item");
-  const existingMessage = bookList?.querySelector(".catalog__message");
-
-  if (existingMessage) {
-    existingMessage.remove();
-  }
-
-  if (!query) {
-    allCards.forEach((li) => li.classList.remove("is-hidden"));
-    return;
-  }
-
-  let foundCount = 0;
-
-  allCards.forEach((li) => {
-    const title = li.querySelector(".book-card__title")?.textContent.toLowerCase() ?? "";
-    const author = li.querySelector(".book-card__author")?.textContent.toLowerCase() ?? "";
-    const matches = title.includes(query) || author.includes(query);
-
-    li.classList.toggle("is-hidden", !matches);
-    if (matches) foundCount++;
-  });
-
-  if (foundCount === 0 && bookList) {
-    const emptyLi = document.createElement("li");
-    emptyLi.className = "catalog__message catalog__message--no-results";
-    emptyLi.textContent = "По вашему запросу ничего не найдено.";
-    bookList.append(emptyLi);
-  }
 }
 
 formEl?.addEventListener("submit", (e) => {
   e.preventDefault();
-  searchBook(inputEl?.value ?? "");
-});
+  const query = inputEl?.value.trim() ?? "";
 
-inputEl?.addEventListener("input", (e) => {
-  searchBook(e.target.value);
+  if (!query) {
+    showMessage("Enter a title or an author to search.");
+    return;
+  }
+
+  renderBooks(query);
 });
 
 async function init() {

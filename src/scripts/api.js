@@ -1,8 +1,10 @@
-export async function getBooks() {
+const SEARCH_URL = "https://openlibrary.org/search.json";
+const RESULTS_LIMIT = 10;
+
+export async function getBooks(query = "classic") {
   try {
-    const res = await fetch(
-      "https://openlibrary.org/search.json?q=classic&limit=10"
-    );
+    const params = new URLSearchParams({ q: query, limit: RESULTS_LIMIT });
+    const res = await fetch(`${SEARCH_URL}?${params}`);
 
     if (!res.ok) {
       return null;
@@ -10,7 +12,7 @@ export async function getBooks() {
 
     const data = await res.json();
     return data.docs;
-  } catch (error) {
+  } catch {
     return null;
   }
 }
