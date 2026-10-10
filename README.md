@@ -1,73 +1,72 @@
-#  Book Сatalog
- [Посмотреть demo](https://andrewbuba123.github.io/Book-Catalog/)   
-Адаптивное веб-приложение для поиска книг и ведения персонального списка избранного с использованием открытого API библиотеки Open Library.
+# Book Catalog
 
----
+## Demo
 
-##  О проекте
+[Open the application](https://andrewbuba123.github.io/frontend-roadmap/)
 
-Приложение позволяет просматривать подборку литературы, искать издания по названию или автору, а также сохранять понравившиеся книги в отдельный список. Все данные об избранном сохраняются в браузере пользователя, поэтому список не сбрасывается при перезагрузке страницы.
+## Description
 
-### Основной функционал:
-- **Каталог книг** — асинхронная подгрузка данных (название, автор, год издания, обложка) через Open Library API.
-- **Поиск книги** — фильтрация карточек по автору и заголовку.
-- **Избранное (Favorites)** — добавление и удаление книг в сайдбар в один клик.
-- **Синхронизация состояний** — отметки лайков на карточках и в сайдбаре обновляются синхронно.
-- **Сохранение данных** — список сохраняется в `localStorage`.
-- **Адаптивный интерфейс** — корректное отображение на смартфонах, планшетах и широких мониторах.
+Book Catalog is a small frontend application for browsing and searching books.
+Book data is loaded from the Open Library API, and favorite books are saved in the browser.
 
----
+## Features
 
-##  Стек технологий
+- browse a catalog of books loaded from the Open Library API;
+- search books by title or author;
+- add books to favorites and remove them;
+- save favorites to Local Storage, so they persist after a page reload;
+- responsive layout for mobile, tablet, and desktop.
 
-- **HTML5** — семантическая структура документа (`<article>`, `<header>`, `<main>`, `<aside>`, `<footer>`).
-- **CSS3** — методология БЭМ, модульная архитектура файлов, переменные (`:root`), функции `color-mix()`, гибкие сетки CSS Grid и Flexbox, медиазапросы.
-- **JavaScript (ES6+)** — нативный JS (Vanilla JS):
-  - Модули (`import` / `export`)
-  - Асинхронные запросы (`async/await`, Fetch API)
-  - Работа с хранилищем (`localStorage`)
-  - Динамическое создание узлов DOM без сторонних библиотек
-- **API** — [Open Library Search API](https://openlibrary.org/developers/api) + Covers CDN.
+## Technologies
 
----
+- HTML
+- CSS
+- JavaScript
+- Vite
+- npm
 
-##  Структура проекта
+## Installation and Usage
 
-```text
-├── index.html               # Разметка страницы
-├── styles/                  # Модули стилей
-│   ├── base/                # Базовые стили, сброс, CSS-переменные, сетка
-│   │   ├── variables.css
-│   │   ├── reset.css
-│   │   └── layout.css
-│   ├── blocks/              # Стили изолированных БЭМ-блоков
-│   │   ├── header.css
-│   │   ├── hero.css
-│   │   ├── search-form.css
-│   │   ├── catalog.css
-│   │   ├── book-card.css
-│   │   ├── favorites.css
-│   │   ├── fav-card.css
-│   │   └── footer.css
-│   └── main.css             # Точка входа для CSS
-└── js/                      # Логика приложения
-    ├── api.js               # Сетевые запросы к Open Library
-    ├── storage.js           # Логика работы с localStorage
-    ├── dom.js               # Фабрики создания DOM-элементов
-    ├── components/          # Модули карточек каталога и избранного
-    │   ├── bookCard.js
-    │   └── favCard.js
-    └── app.js               # Главный скрипт: события, рендер, поиск
+Clone the repository:
+
+```bash
+git clone https://github.com/Andrewbuba123/frontend-roadmap.git
 ```
 
----
+Navigate to the project directory:
 
+```bash
+cd frontend-roadmap
+```
 
-## Запуск локально
+Install dependencies:
 
-1. Склонируйте репозиторий: `git clone https://github.com/Andrewbuba123/Book-Catalog.git`
-2. Откройте папку проекта в VS Code.
-3. Установите расширение **Live Server**.
-4. Нажмите правой кнопкой на `index.html` → **Open with Live Server**.
+```bash
+npm install
+```
 
-> Проект использует ES-модули, поэтому открытие `index.html` двойным кликом не сработает — нужен локальный сервер.
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Production Build
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+The production files will be generated in the `dist/` directory.
+
+## Screenshots
+
+![Book Catalog](./src/assets/book-catalog.png)
+
+## Future Improvements
+
+- add sorting;
+- add pagination;
+- add a separate book details page.
