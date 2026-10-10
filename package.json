@@ -1,12 +1,14 @@
 {
-  "name": "frontend-roadmap",
+  "name": "book-catalog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple book catalog application",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
+  "author": "Andrewbuba123",
+  "license": "ISC",
   "devDependencies": {
     "vite": "^8.3.4"
   }
