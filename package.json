@@ -10,6 +10,8 @@
   "author": "Andrewbuba123",
   "license": "ISC",
   "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
     "vite": "^8.3.4"
   }
 }
