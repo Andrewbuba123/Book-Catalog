@@ -6,6 +6,8 @@ Book Catalog is a small frontend application for browsing and searching books.
 In the interface, the app is called **The Library**.
 Book data is loaded from the [Open Library API](https://openlibrary.org/developers/api), and favorite books are saved in the browser.
 
+The project and the TypeScript practice lessons were built while following the [Innowise Frontend course](https://innowise-frontend.notion.site/3b21d8d45e0d80f39575c5b8c2c5db70?v=3b21d8d45e0d807e9387000cd684527f).
+
 ## Features
 
 - browse a catalog of books loaded from the Open Library API;
@@ -65,7 +67,8 @@ The production files will be generated in the `dist/` directory.
 
 ## TypeScript Practice
 
-The `ts-practice/` folder contains TypeScript exercises (lessons 1–22) completed while learning the language.
+The `ts-practice/` folder contains my solutions to the TypeScript lessons (1–22) from the [Innowise Frontend course](https://innowise-frontend.notion.site/3b21d8d45e0d80f39575c5b8c2c5db70?v=3b21d8d45e0d807e9387000cd684527f).
+Each `lesson-XX.ts` file corresponds to the lesson with the same number in the course materials.
 They are not part of the application and are not included in the production build.
 
 Type-check all lessons:
