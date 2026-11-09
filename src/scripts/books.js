@@ -86,7 +86,7 @@ export function createFavBook(book, onToggleFav) {
     ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
     : bookIcon;
 
-  const mainImg = createImg(coverUrl, "Изображение обложки", "fav-card__cover");
+  const mainImg = createImg(coverUrl, "Book cover", "fav-card__cover");
   const titleEl = createTitle(book.title || "Unknown Title", "fav-card__title");
   const textEl = createText(book.author || "", "fav-card__author");
   const spanEl = createSpan(book.year || "—", "fav-card__year");
@@ -115,7 +115,7 @@ export function createBook(book, onToggleFav) {
 
   const mainImg = createImg(
     coverUrl,
-    "Изображение обложки",
+    "Book cover",
     "book-card__cover",
   );
 
